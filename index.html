@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Register Refugee - UNHCR Census</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <h2>Refugee Registration</h2>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="admin.html">Admin</a>
+      <a href="map.html">Map</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="form-box">
+      <h3>Register Household</h3>
+      <form id="registerForm">
+        <div class="row">
+          <label>Full Name<input name="name" required /></label>
+          <label>Gender
+            <select name="gender">
+              <option>Male</option><option>Female</option><option>Other</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="row">
+          <label>Age<input type="number" name="age" min="0" required /></label>
+          <label>Country of Origin<input name="origin" required /></label>
+        </div>
+
+        <div class="row">
+          <label>Camp
+            <select name="camp">
+              <option>Makeni</option>
+              <option>Mayukwayukwa</option>
+              <option>Meheba</option>
+              <option>Mantapala</option>
+            </select>
+          </label>
+
+          <label>Household members<input type="number" min="1" name="members" value="1" required /></label>
+        </div>
+
+        <label>Notes<textarea name="notes" rows="3"></textarea></label>
+
+        <div class="form-actions">
+          <button class="btn" type="submit">Save (Local)</button>
+          <button type="button" id="resetBtn" class="btn ghost">Reset</button>
+        </div>
+      </form>
+
+      <div id="saveAlert" class="alert success hidden">Saved to local demo storage ✅</div>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

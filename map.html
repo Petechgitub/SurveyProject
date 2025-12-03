@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Map - UNHCR Camps</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-sA+q6b9/Zmp3g2b7e1mH7E5tY1Ih2Ykq1f2R8Y3kQmM=" crossorigin=""/>
+  <style>#map{height:70vh;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.12)}</style>
+</head>
+<body>
+  <header class="navbar">
+    <h2>Camps Map</h2>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="admin.html">Admin</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <main class="container" style="padding-top:18px;">
+    <div class="card">
+      <h3>Refugee Camps — Zambia</h3>
+      <div id="map"></div>
+      <p class="muted">Markers show camp name + sample population. Click for details.</p>
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-o9N1jNEgH8h0vK3qQb4u9N6qf4lA7h6G1qvGQ0Jv5vI=" crossorigin=""></script>
+  <script>
+    // Coordinates are approximate — replace with exact camp coordinates if available
+    const camps = [
+      { id:'Makeni', coords: [-12.664, 28.150], pop: 4300, info: 'Makeni refugee settlement' },
+      { id:'Mayukwayukwa', coords: [-14.134, 24.252], pop: 7200, info: 'Mayukwayukwa settlement' },
+      { id:'Meheba', coords: [-13.249, 23.194], pop: 11500, info: 'Meheba settlement' },
+      { id:'Mantapala', coords: [-10.996, 33.075], pop: 6200, info: 'Mantapala refugee camp' }
+    ];
+
+    const map = L.map('map').setView([-13.0, 26.5], 6);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    camps.forEach((c, i) => {
+      const marker = L.marker(c.coords).addTo(map);
+      marker.bindPopup(`<strong>${c.id}</strong><br/>${c.info}<br/>Population (sample): ${c.pop}`);
+    });
+  </script>
+</body>
+</html>
