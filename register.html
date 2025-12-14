@@ -1,0 +1,42 @@
+<!-- signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Register - UNHCR Census</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body>
+        <main class="container">
+            <section class="form-box">
+                <h2>Sign Up</h2>
+                <form action="signup.php" method="POST" aria-label="Sign up form">
+                    <label for="username">Username</label>
+                    <input id="username" name="username" type="text" placeholder="Enter username" required title="Username" />
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="name@example.com" required title="Email address" />
+
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" placeholder="Create a password" required title="Password" />
+
+                    <label for="role">Role</label>
+                    <select id="role" name="role" required title="Role">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+
+                    <div class="form-actions">
+                        <button class="btn" type="submit" name="signup">Sign Up</button>
+                        <a class="btn ghost" href="login.html">Already have an account?</a>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </body>
+    </html>
+    <h2>Login</h2>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login - UNHCR Census</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="form-box">
+      <h2>Login</h2>
+      <form action="login.php" method="POST" aria-label="Login form">
+        <label for="login-email">Email</label>
+        <input id="login-email" name="email" type="email" placeholder="name@example.com" required title="Email address" />
+
+        <label for="login-password">Password</label>
+        <input id="login-password" name="password" type="password" placeholder="Your password" required title="Password" />
+
+        <div class="form-actions">
+          <button class="btn" type="submit" name="login">Login</button>
+          <a class="btn ghost" href="register.html">Don’t have an account?</a>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
