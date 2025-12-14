@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNHCR Refugee Dashboard</title>
+
+  <!-- Icons & Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/dashboard.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>UNHCR</h2>
+    <a href="#"><i class="fa fa-chart-line"></i> Dashboard</a>
+    <a href="#"><i class="fa fa-users"></i> Refugees</a>
+    <a href="#"><i class="fa fa-map"></i> Camps Map</a>
+    <a href="#"><i class="fa fa-gear"></i> Admin</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h1>Refugee Management Dashboard</h1>
+
+    <!-- Summary Cards -->
+    <div class="cards">
+      <div class="card">
+        <h3>Total Refugees</h3>
+        <p id="totalRefugees">0</p>
+      </div>
+      <div class="card">
+        <h3>Camps</h3>
+        <p>4</p>
+      </div>
+      <div class="card">
+        <h3>Male</h3>
+        <p id="maleCount">0</p>
+      </div>
+      <div class="card">
+        <h3>Female</h3>
+        <p id="femaleCount">0</p>
+      </div>
+    </div>
+
+    <!-- Chart -->
+    <div class="chart-box">
+      <canvas id="genderChart"></canvas>
+    </div>
+
+    <!-- Map -->
+    <h2>Camp Locations</h2>
+    <div id="map"></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/assets/css/dashboard.js"></script>
+</body>
+</html>
